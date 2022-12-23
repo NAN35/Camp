@@ -3,7 +3,7 @@ const cities = require('./cities');
 const { descriptors, places } = require('./seedHelpers')
 const Campground = require('../models/campground');
 
-const MONGODB_URI = 'mongodb+srv://mongo:Akshay35@cluster0.jdlkxve.mongodb.net/yelp-camp?retryWrites=true&w=majority'
+const MONGODB_URI = process.env.MONGODB_URI;
 
 async function main() {
     await mongoose.connect(MONGODB_URI);
